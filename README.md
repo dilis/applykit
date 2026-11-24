@@ -38,6 +38,12 @@ Each application lives in its own directory, `applications/<company>--<role>--<u
 
    Replace the example content with your own: contact details, summary, skills, experience, education, trainings. This file is the only source Claude uses about you, so keep it complete and accurate. An experience entry has `company`, `location`, `role`, `start`, `end` (`YYYY` or `YYYY-MM`, quoted; `null` for current), `highlights`, and optionally `about`. A highlight is either a string or a `text` plus `details` list.
 
+   **Shortcut:** instead of filling in the YAML by hand, start from a very comprehensive CV or resume (every job, project, skill, training, and date, not a trimmed one-pager). Put it in the repo directory and ask Claude to hydrate the profile from it:
+
+   > Hydrate `profile/applicant.yaml` from `<your-cv>.pdf`, following `profile/applicant.example.yaml`.
+
+   The more complete the source CV, the better the profile, since Claude only uses what ends up in it. Review the generated file and fix anything missing or wrong. Claude should not add details that are not in your CV.
+
 3. That's it. `profile/applicant.yaml` and `applications/` are gitignored, so your personal data stays local.
 
 ## Use
