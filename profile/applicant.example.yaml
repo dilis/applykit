@@ -1,0 +1,44 @@
+# Fictional example. Copy to profile/applicant.yaml (gitignored) and fill in your own details.
+name:
+  full: Jane Q. Doe
+  short: Jane Doe
+
+contact:
+  address: 123 Example Street, Sample City, Country
+  email: jane.doe@example.com
+  phone: "+00 000 000 0000"
+  linkedin: https://www.linkedin.com/in/jane-doe
+
+summary: >-
+  Software engineer with experience in backend and web development, focused on
+  quality and maintainable solutions.
+
+skills:
+  languages: [Python, TypeScript]
+  frameworks_and_libraries: [Django, React]
+  databases: [Postgres]
+  devops: [Docker, CI/CD]
+  cloud: [AWS]
+  methodologies: [Agile/Scrum]
+
+experience:
+  - company: Acme Labs
+    location: Remote
+    role: Senior Software Engineer
+    start: "2019-01"
+    end: null  # present
+    about: An R&D software company.
+    highlights:
+      - Built and maintained a REST API serving internal teams.
+      - text: Led a migration to containerized deployments.
+        details:
+          - Reduced deploy time from hours to minutes.
+
+education:
+  - institution: Example University
+    degree: BS Computer Science
+    end: "2015"
+
+trainings:
+  - institution: Example Training Institute
+    title: Advanced Software Design

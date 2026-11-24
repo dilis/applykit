@@ -1,0 +1,5 @@
+.DS_Store
+# Personal data: kept locally, never published
+profile/applicant.yaml
+applications/*
+!applications/.gitkeep

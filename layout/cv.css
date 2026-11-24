@@ -1,0 +1,47 @@
+/* CV stylesheet: A4 (595.2 x 841.8pt), ~53.5pt side margins, Helvetica Neue, black only. */
+@page { size: 595.2pt 841.8pt; margin: 54pt 53.5pt 54pt 53.5pt; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 11pt; line-height: 12pt; color: #000;
+  -webkit-print-color-adjust: exact;
+  /* kerning splits words in extracted PDF text ("T ypeScript"), which breaks ATS keyword matching */
+  font-kerning: none; font-variant-ligatures: none; text-rendering: optimizeSpeed;
+}
+a { color: #000; text-decoration: underline; }
+b, strong { font-weight: 700; }
+
+/* Header: centered name + contact line */
+header { text-align: center; }
+h1 { font-size: 18pt; line-height: 21pt; font-weight: 400; margin: 0; }
+.contact { font-size: 10pt; line-height: 12pt; margin: 0.5pt auto 0; max-width: 432pt; }
+
+/* Sections: full-width 0.75pt rule, tiny bold uppercase heading */
+section { border-top: 0.75pt solid #000; margin-top: 12.5pt; padding-top: 5.5pt; }
+header + section { margin-top: 11.5pt; }
+h2 { font-size: 8pt; line-height: 9.5pt; font-weight: 700; text-transform: uppercase; margin: 0 0 7.5pt; }
+section p { margin: 0 0 8.5pt; }
+section p:last-child { margin-bottom: 0; }
+
+/* Experience entry */
+.job { margin-bottom: 8.5pt; }
+.job:last-child { margin-bottom: 0; }
+.role-line { font-size: 12pt; line-height: 14pt; }
+.period { font-size: 12pt; line-height: 14pt; }
+.job > ul { margin-top: 7.5pt; }
+
+/* Bullets: "•" at the margin, text indented 9pt; nested list indented a further 9pt */
+ul { list-style: none; margin: 0; padding: 0; }
+li { position: relative; padding-left: 9pt; }
+li::before { content: "\2022"; position: absolute; left: 0; }
+li > ul { margin: 0 0 0 0; }
+li > ul > li { padding-top: 0.5pt; padding-bottom: 0.5pt; }
+
+/* Education / trainings entry */
+.edu { margin-bottom: 12pt; }
+.edu:last-child { margin-bottom: 0; }
+.edu .loc { font-style: italic; }
+
+.avoid-break, li, .role-line, .period, .edu { break-inside: avoid; }
+.role-line, .period { break-after: avoid; }
